@@ -4,7 +4,7 @@
 <!ENTITY RFC5280 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5280.xml">
 <!ENTITY RFC6481 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6481.xml">
 <!ENTITY RFC6482 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6482.xml">
-<!ENTITY RFC6485 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6485.xml">
+<!ENTITY RFC7935 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7935.xml">
 <!ENTITY RFC6487 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6487.xml">
 <!ENTITY RFC6488 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6488.xml">
 <!ENTITY RFC8174 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml">
@@ -261,7 +261,7 @@
 	This field contains the OID of the hash algorithm used to hash the
       files that the authority has placed into the repository.  The hash
       algorithm used MUST conform to the RPKI Algorithms and Key Size
-      Profile specification <xref target="RFC6485"/>.
+      Profile specification <xref target="RFC7935"/>.
 	</t>
 
 	<t hangText="fileList:">
@@ -609,7 +609,7 @@
 	<section title="Acknowledgements" anchor="sect-10"><t>
    The authors would like to acknowledge the contributions from George Michelson and Randy Bush in the preparation of the manifest specification.
    Additionally, the authors would like to thank Mark Reynolds and Christopher Small for assistance in clarifying manifest validation and RP behavior.
-   The authors also wish to thank Tim Bruijnzeels, Job Snijders, Oleg Muravskiy, Sean Turner, Adianto Wibisono, Murray Kucherawy, Francesca Palombini, and Roman Danyliw for their helpful review of this document.</t>
+   The authors also wish to thank Tim Bruijnzeels, Job Snijders, Oleg Muravskiy, Sean Turner, Adianto Wibisono, Murray Kucherawy, Francesca Palombini, Roman Danyliw, and Lars Eggert for their helpful review of this document.</t>
 	</section>
 
 	</middle>
@@ -629,7 +629,7 @@
 	&RFC5280;
 	&RFC6481;
 	&RFC6482;
-	&RFC6485;
+	&RFC7935;
 	&RFC6486;
 	&RFC6487;
 	&RFC6488;
@@ -703,7 +703,7 @@
 
     <section title="Changes since RFC 6486" anchor="sect-b">
     <t>
-       In 2019 it came to light that multiple Relying Party implementations
+       In 2019, it came to light that multiple Relying Party implementations
        were in a vulnerable position, possibly due to perceived ambiguity in
        the original <xref target="RFC6486"/> specification.
        This document attempts to clarify the innovative concept and application
