@@ -564,13 +564,9 @@
            operator be notified of this warning.</t>
 
 	<t>
-        Termination of processing means that the RP SHOULD continue to use
-           cached versions of the objects associated with this CA instance,
-           until such time as they become stale or they can be replaced by
-           objects from a successful fetch.  This implies that the RP MUST not
-           try to acquire and validate subordinate signed objects, e.g.,
-           subordinate CA certificates, until the next interval when the RP is
-           scheduled to fetch and process data for this CA instance.</t>
+        Termination of processing means that the RP SHOULD continue to use cached versions of the objects associated with this CA instance, until such time as they become stale or they can be replaced by objects from a successful fetch.
+        This implies that the RP MUST not try to acquire and validate subordinate signed objects, e.g., subordinate CA certificates, until the next interval when the RP is scheduled to fetch and process data for this CA instance.
+        </t>
 
 	</section>
 
