@@ -81,23 +81,13 @@
    To assist in the detection of such attacks, RPKI repository systems make use of a signed object called a "manifest".
    </t>
 
-	<t>
-   A manifest is a signed object that enumerates all the signed objects
-   (files) in the repository publication point (directory) that are
-   associated with an authority responsible for publishing at that
-   publication point.  Each manifest contains both the name of the file
-   containing the object and a hash of the file content, for every
-   signed object issued by an authority that is published at the
-   authority's repository publication point.  A manifest is intended to
-   allow an RP to detect unauthorized object removal or the substitution
-   of stale versions of objects at a publication point.  A manifest also
-   is intended to allow an RP to detect similar outcomes that may result
-   from a man-in-the-middle attack on the retrieval of objects from the
-   repository.  Manifests are intended to be used in Certification
-   Authority (CA) publication points in repositories (directories
-   containing files that are subordinate certificates and Certificate
-   Revocation Lists (CRLs) issued by this CA and other signed objects
-   that are verified by End-Entity (EE) certificates issued by this CA).</t>
+  <t>
+    A manifest is a signed object that enumerates all the signed objects (files) in the repository publication point (directory) that are associated with an authority responsible for publishing at that publication point.
+    Each manifest contains both the name of the file containing the object and a hash of the file content, for every signed object issued by an authority that is published at the authority's repository publication point.
+    A manifest is intended to allow an RP to detect unauthorized object removal or the substitution of stale versions of objects at a publication point.
+    A manifest also is intended to allow an RP to detect similar outcomes that may result from a man-in-the-middle attack on the retrieval of objects from the repository.
+    Manifests are intended to be used in Certification Authority (CA) publication points in repositories (directories containing files that are subordinate certificates and Certificate Revocation Lists (CRLs) issued by this CA and other signed objects that are verified by End-Entity (EE) certificates issued by this CA).
+   </t>
 
 	<t>
    Manifests are modeled on CRLs, as the issues involved in detecting
