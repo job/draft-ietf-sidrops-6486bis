@@ -97,7 +97,7 @@
    Authority (CA) publication points in repositories (directories
    containing files that are subordinate certificates and Certificate
    Revocation Lists (CRLs) issued by this CA and other signed objects
-   that are verified by end-entity (EE) certificates issued by this CA).</t>
+   that are verified by End-Entity (EE) certificates issued by this CA).</t>
 
 	<t>
    Manifests are modeled on CRLs, as the issues involved in detecting
@@ -153,11 +153,11 @@
 	<section title="Manifest Signing" anchor="sect-3"><t>
    A CA's manifest is verified using an EE certificate.  The
    SubjectInfoAccess (SIA) field of this EE certificate contains the
-   access method OID of id-ad-signedObject.</t>
+   access method Object Identifier (OID) of id-ad-signedObject.</t>
 
 	<t>
    The CA MUST sign only one manifest with each generated private key, and MUST generate a new key pair for each new version of the manifest.
-   This form of use of the associated EE certificate is termed a "one-time-use" EE certificate <xref target="RFC6487"/></t>
+   This form of use of the associated EE certificate is termed a "one-time-use" EE certificate <xref target="RFC6487"/>.</t>
 
 	</section>
 
@@ -236,6 +236,7 @@
       Conforming manifest issuers MUST NOT use number values longer than 20 octets.
       The issuer MUST increase the value of this field monotonically for each newly-generated Manifest.
       Each RP MUST verify that a purported "new" Manifest contains a higher manifestNumber than previously-validated Manifests.
+      If the purported "new" Manifest contains an equal or lower manifestNumber than previously-validated Manifests, the RP SHOULD use locally cached versions of objects, as described in <xref target="sect-6.6"/>.
 	</t>
 
 	<t hangText="thisUpdate:">
@@ -244,6 +245,7 @@
       This field has the same format constraints as specified in <xref target="RFC5280"/> for the CRL field of the same name.
       The issuer MUST ensure that the value of this field is more recent than any previously-generated Manifest.
       Each RP MUST verify that this field value is greater (more recent) than the most recent Manifest it has validated.
+      If this field in a purported "new" Manifest is smaller (less recent) than previously-validated Manifests, the RP SHOULD use locally cached versions of objects, as described in <xref target="sect-6.6"/>.
 	</t>
 
 	<t hangText="nextUpdate:">
@@ -617,7 +619,7 @@
 	<section title="Acknowledgements" anchor="sect-10"><t>
    The authors would like to acknowledge the contributions from George Michelson and Randy Bush in the preparation of the manifest specification.
    Additionally, the authors would like to thank Mark Reynolds and Christopher Small for assistance in clarifying manifest validation and RP behavior.
-   The authors also wish to thank Tim Bruijnzeels, Job Snijders, Oleg Muravskiy, Sean Turner, Adianto Wibisono, and Murray Kucherawy for their helpful review of this document.</t>
+   The authors also wish to thank Tim Bruijnzeels, Job Snijders, Oleg Muravskiy, Sean Turner, Adianto Wibisono, Murray Kucherawy, and Francesca Palombini for their helpful review of this document.</t>
 	</section>
 
 	</middle>
