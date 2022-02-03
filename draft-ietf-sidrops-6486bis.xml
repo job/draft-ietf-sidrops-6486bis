@@ -156,10 +156,8 @@
    access method OID of id-ad-signedObject.</t>
 
 	<t>
-   The CA MUST sign only one manifest with each generated
-   private key, and MUST generate a new key pair for each new version of the
-   manifest.  This form of use of the associated EE certificate is
-   termed a "one-time-use" EE certificate <xref target="RFC6487"/></t>
+   The CA MUST sign only one manifest with each generated private key, and MUST generate a new key pair for each new version of the manifest.
+   This form of use of the associated EE certificate is termed a "one-time-use" EE certificate <xref target="RFC6487"/></t>
 
 	</section>
 
@@ -232,17 +230,12 @@
       manifest is issued for a given publication point.  This field
       allows an RP to detect gaps in a sequence of published manifests.
 	<vspace blankLines="1"/>
-	As the manifest is modeled on the CRL specification, the
-      ManifestNumber is analogous to the CRLNumber, and the guidance in
-      <xref target="RFC5280"/> for CRLNumber values is appropriate as to the range of
-      number values that can be used for the manifestNumber.  Manifest
-      numbers can be expected to contain long integers.  Manifest
-      verifiers MUST be able to process number values up to 20 octets.
-      Conforming manifest issuers MUST NOT use number values longer than
-      20 octets. The issuer MUST increase the value of this field 
-      monotonically for each newly-generated Manifest. Each RP MUST verify that 
-      a purported “new” Manifest contains a higher manifestNumber than 
-      previously-validated Manifests.
+      As the manifest is modeled on the CRL specification, the ManifestNumber is analogous to the CRLNumber, and the guidance in <xref target="RFC5280"/> for CRLNumber values is appropriate as to the range of number values that can be used for the manifestNumber.
+      Manifest numbers can be expected to contain long integers.
+      Manifest verifiers MUST be able to process number values up to 20 octets.
+      Conforming manifest issuers MUST NOT use number values longer than 20 octets.
+      The issuer MUST increase the value of this field monotonically for each newly-generated Manifest.
+      Each RP MUST verify that a purported "new" Manifest contains a higher manifestNumber than previously-validated Manifests.
 	</t>
 
 	<t hangText="thisUpdate:">
@@ -355,11 +348,11 @@
 	This EE certificate MUST have an SIA extension access description
        field with an accessMethod OID value of id-ad-signedobject, where
        the associated accessLocation references the publication point of
-       the manifest as an object URL.(RPs are required to verify both of these syntactic constraints.)
+       the manifest as an object URL. (RPs are required to verify both of these syntactic constraints.)
 	<vspace blankLines="1"/>
 	This EE certificate MUST describe its Internet Number Resources
        (INRs) using the "inherit" attribute, rather than explicit
-       description of a resource set (see <xref target="RFC3779"/>).(RPs are required to verify this.)
+       description of a resource set (see <xref target="RFC3779"/>). (RPs are required to verify this.)
 	<vspace blankLines="1"/>
     It is RECOMMENDED that the validity interval of the EE certificate exactly match the thisUpdate and nextUpdate times of the manifest.
 
@@ -386,12 +379,10 @@
        compute the hash of the manifest itself prior to it being signed.
 	</t>
 
-	<t>Encapsulate the manifest content using the CMS SignedData content
-       type (as specified <xref target="sect-4"/>), sign the manifest using the
-       private key corresponding to the subject key contained in the EE
-       certificate, and publish the manifest in the repository system
-       publication point that is described by the manifest. (RPs are required to verify the CMS signature.)
-</t>
+       <t>
+         Encapsulate the manifest content using the CMS SignedData content type (as specified <xref target="sect-4"/>), sign the manifest using the private key corresponding to the subject key contained in the EE certificate, and publish the manifest in the repository system publication point that is described by the manifest.
+         (RPs are required to verify the CMS signature.)
+       </t>
 
 	<t>Because the key pair is to be used only once, the private key
         associated with this key pair MUST now be destroyed.</t>
@@ -557,11 +548,11 @@
 
 	</section>
 
-	<section title="Failed Fetches" anchor="sect-6.6"><t>
-        If a fetch fails for any of the reasons cited in 6.2-6.5, the RP MUST
-           issue a warning indicating the reason(s)for termination of processing
-           with regard to this CA instance.  It is RECOMMENDED that a human
-           operator be notified of this warning.</t>
+      <section title="Failed Fetches" anchor="sect-6.6">
+      <t>
+        If a fetch fails for any of the reasons cited in 6.2-6.5, the RP MUST issue a warning indicating the reason(s) for termination of processing with regard to this CA instance.
+        It is RECOMMENDED that a human operator be notified of this warning.
+      </t>
 
 	<t>
         Termination of processing means that the RP SHOULD continue to use cached versions of the objects associated with this CA instance, until such time as they become stale or they can be replaced by objects from a successful fetch.
