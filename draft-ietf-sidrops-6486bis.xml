@@ -250,12 +250,10 @@
 
 	<t hangText="thisUpdate:">
 	<vspace blankLines="0"/>
-	This field contains the time when the manifest was created.  This
-      field has the same format constraints as specified in <xref target="RFC5280"/>
-      for the CRL field of the same name. The issuer MUST ensure that the 
-      value of this field is more recent any previously-generated Manifest. 
-      Each RP MUST verify that this field value is greater (more recent) than 
-      the most recent Manifest it has validated.
+      This field contains the time when the manifest was created.
+      This field has the same format constraints as specified in <xref target="RFC5280"/> for the CRL field of the same name.
+      The issuer MUST ensure that the value of this field is more recent any previously-generated Manifest. 
+      Each RP MUST verify that this field value is greater (more recent) than the most recent Manifest it has validated.
 	</t>
 
 	<t hangText="nextUpdate:">
