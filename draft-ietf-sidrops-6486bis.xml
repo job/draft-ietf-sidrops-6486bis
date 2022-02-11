@@ -200,7 +200,7 @@
    manifest number, whichever comes first.</t>
 
         <t>
-   Because a "one-time-use" EE certificate is employed to verify a manifest, it is RECOMMENDED that the EE certificate have a validity period that coincides with the interval from thisUpdate to nextUpdate in the manifest, to prevent needless growth of the CA's CRL.
+   Because a "one-time-use" EE certificate is employed to verify a manifest, the EE certificate MUST be issued with a validity period that coincides with the interval from thisUpdate to nextUpdate in the manifest, to prevent needless growth of the CA's CRL.
         </t>
 
 	<t>
@@ -344,12 +344,10 @@
        (INRs) using the "inherit" attribute, rather than explicit
        description of a resource set (see <xref target="RFC3779"/>). (RPs are required to verify this.)
 	<vspace blankLines="1"/>
-    It is RECOMMENDED that the validity interval of the EE certificate exactly match the thisUpdate and nextUpdate times of the manifest.
+    The validity interval of the EE certificate MUST exactly match the thisUpdate and nextUpdate times specified in the manifest's eContent.
+    (An RP MUST NOT consider misalignment of the validity interval misalignment in and of itself to be an error.)
+    </t>
 
-	<vspace blankLines="1"/>
-    Note: An RP MUST verify all mandated syntactic constraints, i.e., constraints imposed on a CA via a “MUST”.</t>
-    
-    
 	<t>The EE certificate MUST NOT be published in the authority's
        repository publication point.</t>
 
