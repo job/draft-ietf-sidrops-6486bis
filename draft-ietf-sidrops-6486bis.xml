@@ -158,7 +158,7 @@
 
 	<section title="eContentType" anchor="sect-4.1"><t>
    The eContentType for a manifest is defined as id-ct-rpkiManifest and
-   has the numerical value of 1.2.840.113549.1.9.16.1.26.</t>
+   has the numerical object identifier of 1.2.840.113549.1.9.16.1.26.</t>
 
 	<figure><artwork><![CDATA[
       id-smime OBJECT IDENTIFIER ::= { iso(1) member-body(2) us(840)
@@ -609,7 +609,7 @@
 	<section title="Acknowledgements" anchor="sect-10"><t>
    The authors would like to acknowledge the contributions from George Michelson and Randy Bush in the preparation of the manifest specification.
    Additionally, the authors would like to thank Mark Reynolds and Christopher Small for assistance in clarifying manifest validation and RP behavior.
-   The authors also wish to thank Tim Bruijnzeels, Job Snijders, Oleg Muravskiy, Sean Turner, Adianto Wibisono, Murray Kucherawy, Francesca Palombini, Roman Danyliw, Lars Eggert, and Benjamin Kaduk for their helpful review of this document.</t>
+   The authors also wish to thank Tim Bruijnzeels, Job Snijders, Oleg Muravskiy, Sean Turner, Adianto Wibisono, Murray Kucherawy, Francesca Palombini, Roman Danyliw, Lars Eggert, Robert Wilton, and Benjamin Kaduk for their helpful review of this document.</t>
 	</section>
 
 	</middle>
