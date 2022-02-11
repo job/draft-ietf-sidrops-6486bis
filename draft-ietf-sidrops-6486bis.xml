@@ -199,11 +199,9 @@
    specified in nextUpdate or until a manifest is issued with a greater
    manifest number, whichever comes first.</t>
 
-	<t>
-   Because a "one-time-use" EE certificate is employed to verify a manifest,
-   it is RECOMMENDED that the EE certificate have a validity period that coincides with
-   the interval from thisUpdate to nextUpdate in the manifest, to prevent needless
-   growth of the CA's CRL.</t>
+        <t>
+   Because a "one-time-use" EE certificate is employed to verify a manifest, it is RECOMMENDED that the EE certificate have a validity period that coincides with the interval from thisUpdate to nextUpdate in the manifest, to prevent needless growth of the CA's CRL.
+        </t>
 
 	<t>
    The data elements of the manifest structure are defined as follows:</t>
