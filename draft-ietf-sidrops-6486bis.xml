@@ -536,7 +536,7 @@
       the publication point.  If the computed hash value of a file listed
       on the manifest does not match the hash value contained in the
       manifest, then the fetch has failed and the RP MUST proceed to
-      <xref target="sect-6.6"/>; otherwise proceed to <xref target="sect-6.6"/>.</t>
+      <xref target="sect-6.6"/>.</t>
 
 	</section>
 
@@ -609,7 +609,7 @@
 	<section title="Acknowledgements" anchor="sect-10"><t>
    The authors would like to acknowledge the contributions from George Michelson and Randy Bush in the preparation of the manifest specification.
    Additionally, the authors would like to thank Mark Reynolds and Christopher Small for assistance in clarifying manifest validation and RP behavior.
-   The authors also wish to thank Tim Bruijnzeels, Job Snijders, Oleg Muravskiy, Sean Turner, Adianto Wibisono, Murray Kucherawy, Francesca Palombini, Roman Danyliw, and Lars Eggert for their helpful review of this document.</t>
+   The authors also wish to thank Tim Bruijnzeels, Job Snijders, Oleg Muravskiy, Sean Turner, Adianto Wibisono, Murray Kucherawy, Francesca Palombini, Roman Danyliw, Lars Eggert, and Benjamin Kaduk for their helpful review of this document.</t>
 	</section>
 
 	</middle>
