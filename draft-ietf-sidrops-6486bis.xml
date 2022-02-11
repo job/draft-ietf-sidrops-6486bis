@@ -8,7 +8,7 @@
 <!ENTITY RFC6487 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6487.xml">
 <!ENTITY RFC6488 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6488.xml">
 <!ENTITY RFC8174 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml">
-<!ENTITY RFC3370 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3370.xml">
+<!ENTITY RFC5652 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5652.xml">
 <!ENTITY RFC3779 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3779.xml">
 <!ENTITY RFC6480 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6480.xml">
 <!ENTITY RFC6486 SYSTEM "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6486.xml">
@@ -127,7 +127,7 @@
 
 	<t>
    Every RPKI signed object includes, in the Cryptographic Message
-   Syntax (CMS) <xref target="RFC3370"/> wrapper of the object, the EE certificate used
+   Syntax (CMS) <xref target="RFC5652"/> wrapper of the object, the EE certificate used
    to verify it <xref target="RFC6488"/>.  Thus, there is no requirement to separately
    publish that EE certificate at the CA's repository publication point.</t>
 
@@ -630,7 +630,6 @@
 	&RFC6481;
 	&RFC6482;
 	&RFC7935;
-	&RFC6486;
 	&RFC6487;
 	&RFC6488;
 	&RFC8174;
@@ -646,9 +645,10 @@
     </references>
     
 	<references title="Informative References">
-	&RFC3370;
+	&RFC5652;
 	&RFC3779;
 	&RFC6480;
+	&RFC6486;
 	&RFC6489;
 	</references>
     <section title="ASN.1 Module" anchor="sect-a"><figure><artwork><![CDATA[
