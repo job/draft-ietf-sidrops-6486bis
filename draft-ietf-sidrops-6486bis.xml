@@ -718,8 +718,9 @@
           EE certificates.
        </t>
        <t>
-         Emphasize a recommendation for EE certificates to have a validity period
-         that coincides with the interval specified in the Manifest eContent.
+	 Clarify that Manifest EE certificates are to be issued with a validity
+	 period which coincides with the interval specified in the Manifest
+         eContent, which coincides with the CRL's thisUpdate and nextUpdate.
        </t>
        <t>
          Clarify the manifestNumber is monotonically incremented in steps of 1.
